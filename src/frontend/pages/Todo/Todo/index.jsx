@@ -17,7 +17,7 @@ function Todo() {
     const [isClicked, setIsClicked] = useState(false)
     const [newList, setNewList] = useState("")
 
-    const API_URL = "https://todolist-backend-96ww.onrender.com"
+    const API_URL = "https://todo-04ky.onrender.com"
 
     useEffect(() => {
         axios.get(`${API_URL}/lists`)
