@@ -1,0 +1,34 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --default-font: "Atkinson Hyperlegible Mono", sans-serif;
+    --color-font-button-filter-task: #fff;
+    --background-button-filter-task: #a63f13;
+}
+
+.filter-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.filter-buttons button{
+    padding: 5px 10px;
+    border-radius: 25px;
+    background-color: var(--color-font-button-filter-task);
+    border: 1px solid var(--background-button-filter-task);
+    font-family: var(--default-font);
+    font-size: 12px;
+}
+
+@media screen and (min-width:768px){
+    .filter-buttons button{
+        width: 100px;
+    }
+}

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-title: "Amatic SC", serif;
+    --default-font: "Atkinson Hyperlegible Mono", sans-serif;
+    --background-color-nav: #FFF6ED;
+    --default-text-color-nav: #000000;
+    --text-color-nav-dot-title: #FF6C00;
+    --color-border-nav: #FF6C00;
+    --color-box-shadow-nav: #ff6c0070;
+    --color-font-button-login: #fff;
+    --color-background-button-login: #FF6C00;
+    --color-font-button-login-hover: #000000;
+    --color-background-button-login-hover: #fff;
+    --color-border-button-login-hover: #FF6C00;
+}
+
+.wrapper-nav{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 40px;
+    width: 100vw;
+    background-color: var(--background-color-nav);
+    box-shadow: 2px -3px 20px var(--color-box-shadow-nav);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+
+}
+
+.title-nav{
+    font-family: var(--font-title);
+    font-size: 25px;
+    cursor: pointer;
+
+    & .dot-title{
+        color: var(--text-color-nav-dot-title);
+        font-weight: bolder;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+.title-nav a{
+    color: var(--default-text-color-nav);
+}
+
+.button-login-nav a{
+    color: var(--color-font-button-login);
+}
+
+.button-login-nav{
+    padding: 5px 12px;
+    color: var(--color-font-button-login);
+    background-color: var(--color-background-button-login);
+    border-radius: 15px;
+    font-family: var(--font-title);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button-login-nav:hover{
+    background-color: var(--color-background-button-login-hover);
+    border: 1px solid var(--color-border-button-login-hover);
+}
+
+.button-login-nav a:hover{
+    color: var(--color-font-button-login-hover);
+}
+
+.user{
+    background-color: #FFf;
+}
+
+@media screen and (min-width:768px){
+    .title-nav{
+        font-size: 35px;
+    }
+
+    .button-login-nav{
+        font-size: 23px;
+        padding: 3px 19px;
+    }
+}

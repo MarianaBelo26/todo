@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 2;
+    padding: 0;
+}
+
+:root {
+    --font-title: "Amatic SC", serif;
+    --default-font: "Atkinson Hyperlegible Mono", sans-serif;
+    --background-color: #FFF6ED;
+    --default-text-color-button: #ea6200;
+    --color-border-button: #FF6C00;
+}
+
+.button-language{
+    font-family: var(--default-font);
+    border: 1px solid var(--color-border-button);
+    border-radius: 4px;
+    color: var(--default-text-color-button);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 1px 1px 0px 0px;
+
+    position: relative;
+    z-index: 999;
+}
+
+@media screen and (min-width:768px){
+    .button-language{
+        font-size: 20px;
+    }
+}

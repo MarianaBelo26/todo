@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-title: "Amatic SC", serif;
+    --default-font: "Atkinson Hyperlegible Mono", sans-serif;
+    --background-color-payment: #FFF6ED;
+    --color-box-shadow: #a63f136d;
+    --color-font-button-payment: #fff;
+    --color-background-button-payment: #a63f13;
+    --background-button-payment: #FF6C00;
+    --background-button-payment-hover: #FFF6ED;
+    --color-button-payment-hover: #FF6C00;
+    --color-border-button-payment-hover: #FF6C00;
+}
+
+.wrapper-payment {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--background-color-payment);
+    font-family: var(--default-font);
+}
+
+.form-payment {
+    margin-top: 40px;
+    width: 70vw;
+    border: 1px solid var(--color-border-button-payment-hover);
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px var(--color-box-shadow);
+}
+
+.title-payment {
+    font-size: 35px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: var(--font-title);
+}
+
+.p-payment {
+    font-size: 12px;
+    text-align: center;
+}
+
+.payment {
+    padding: 15px;
+
+    .payment-form {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .credit-debit {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100px;
+        gap: 5px;
+
+        & .pay {
+            width: 20px;
+        }
+    }
+
+    p {
+        margin-top: 15px;
+    }
+
+    input {
+        display: flex;
+        height: 25px;
+        width: 55vw;
+        background-color: var(--background-color-payment);
+        border: 1px solid var(--color-background-button-payment);
+        border-radius: 20px;
+        padding: 0px 10px;
+    }
+
+    .input-submit-payment {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        width: 40vw;
+        background-color: var(--background-button-payment);
+        color: var(--color-font-button-payment);
+        cursor: pointer;
+
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .input-submit-payment:hover {
+        background-color: var(--background-button-payment-hover);
+        color: var(--color-button-payment-hover);
+        border: 1px solid var(--color-border-button-payment-hover);
+    }
+}
+
+@media screen and (min-width:768px) {
+    .wrapper-payment {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .form-payment {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40vw;
+    }
+
+    .payment {
+ 
+        #icardholder,
+        #icard-number,
+        #iexpiration-date,
+        #icvv {
+            width: 30vw;
+        }
+
+        .input-submit-payment {
+            width: 20vw;
+        }
+    }
+}

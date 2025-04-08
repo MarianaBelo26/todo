@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN+Guides&family=Quicksand:wght@300..700&family=Sarina&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-title: "Amatic SC", serif;
+    --default-font: "Atkinson Hyperlegible Mono", sans-serif;
+    --background-color-contact: #A64013;
+    --default-text-color-contact: #fff;
+    --border-my-social-network-color: #fff;
+    --background-color-icons-hover: #fff;
+    --color-icons-hover: #A64013;
+}
+
+.wrapper-contacts {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background-color-contact);
+    color: var(--default-text-color-contact);
+    font-family: var(--default-font);
+}
+
+.title-contacts {
+    margin: 10px 10px 40px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: var(--font-title);
+}
+
+.scrolling-text-wrapper {
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    margin-bottom: 50px;
+    width: 900px;
+    font-size: 50px;
+    animation: scroll-text 10s linear(0 0%, 1.03 112.64%) infinite;
+}
+
+.scrolling-text span {
+    display: inline-flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-left: 100%;
+    font-weight: 600;
+}
+
+.my-social-networks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    & a{
+        color: var(--default-text-color-contact);
+    }
+
+    & .github,
+    .linkedin,
+    .e-mail,
+    .instagram {
+        margin-bottom: 50px;
+        display: flex;
+        padding: 10px;
+        border: 1px solid var(--border-my-social-network-color);
+        border-radius: 50%;
+        box-shadow: 4px 3px 7px 0px #00000078;
+        cursor: pointer;
+
+        & .bi-github,
+        .bi-linkedin,
+        .bi-envelope-fill,
+        .bi-instagram {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+
+    & .github:hover,
+    .linkedin:hover,
+    .e-mail:hover,
+    .instagram:hover{
+        background-color: var(--background-color-icons-hover);
+        color: var(--color-icons-hover);
+    }
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+} 
+
+@media screen and (min-width: 445px){
+    .title-contacts{
+        font-size: 25px;
+    }
+}
