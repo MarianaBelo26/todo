@@ -9,7 +9,7 @@ function Plans() {
 
     const handlePlanSelection = (plan) =>{
         if (plan === 'free') {
-            navigate('/signup', {state: {next: '/todo', plan: 'free'}})
+            navigate('/signup', {state: {next: '/tasks', plan: 'free'}})
         } else {
                 navigate('/signup', {state: {next: '/payment', plan}})
         }
