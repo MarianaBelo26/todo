@@ -25,7 +25,7 @@ function App() {
   
 
   return (
-    <Router>
+    <Router basename='/todo'>
       <Nav isUserConected={isUserConected} setIsUserConected={setIsUserConected} changeLanguage={changeLanguage} />
       <Routes>
         <Route path='/' element={
@@ -39,7 +39,7 @@ function App() {
         <Route path='/login' element={<Login setIsUserConected={setIsUserConected} />} />
         <Route path='/signup' element={<SignUp setIsUserConected={setIsUserConected} />}  />
         <Route path='/payment' element={<Payment setIsUserConected={setIsUserConected} />} />
-        <Route path='todo' element={<Todo  />} />
+        <Route path='/todo' element={<Todo  />} />
       </Routes>
     </Router>
   )
