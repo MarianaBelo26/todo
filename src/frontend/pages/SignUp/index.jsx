@@ -10,10 +10,10 @@ function SignUp({ setIsUserConected }) {
     const selectedPlan = location.state?.plan || null
 
     const nextRoute = selectedPlan === 'free'
-    ? '/todo'
+    ? '/tasks'
     : selectedPlan
         ? '/payment'
-        : '/todo'
+        : '/tasks'
  
     const handleSignup = (e) =>{
         e.preventDefault()
