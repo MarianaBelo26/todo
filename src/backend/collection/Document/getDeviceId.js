@@ -1,4 +1,4 @@
-function getDeviceId() {
+export function getDeviceId() {
     let deviceId = localStorage.getItem('deviceId')
 
     if(!deviceId){
@@ -8,4 +8,3 @@ function getDeviceId() {
     return deviceId
 }
 
-export default getDeviceId()
