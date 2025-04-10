@@ -7,3 +7,5 @@ function getDeviceId() {
     }
     return deviceId
 }
+
+export default getDeviceId()

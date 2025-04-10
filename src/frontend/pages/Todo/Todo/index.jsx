@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import axios from 'axios'
-import getDeviceId from '../../../../backend/collection/Document/getDeviceId'
+import getDeviceId from '../../../../backend/collection/document/getDeviceId'
 import TodoForm from '../TodoForm'
 import FilterTasks from '../FilterTasks'
 import './style.css'
