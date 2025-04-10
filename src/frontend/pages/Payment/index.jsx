@@ -76,7 +76,7 @@ function PaymentPage({ setIsUserConected }) {
                         <input type="text" name="cvv" id="icvv" placeholder="123" maxLength="3" value={cvvNumber}
                             onChange={cvvChange} />
                     </label>
-                    <Link to='/todo'>
+                    <Link to='/tasks'>
                         <input type="submit" value={t('pay')} className="input-submit-payment" onClick={handleLogin} />
                     </Link>
                 </form>

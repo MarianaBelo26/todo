@@ -42,7 +42,7 @@ function LoginPage({ setIsUserConected }) {
                         <input type="password" name="password" id="ipassword" placeholder={t('your-password')} autoComplete="current-password" />
                         <label htmlFor="ipassword"></label>
                     </div>
-                    <Link to='/todo'>
+                    <Link to='/tasks'>
                         <input type="submit" value={t('enter')} className="input-submit" onClick={handleLogin} />
                     </Link>
                     <Link className="forget" to='/'>
