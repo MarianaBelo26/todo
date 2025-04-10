@@ -25,7 +25,7 @@ function App() {
   
 
   return (
-    <Router basename='/todo'>
+    <Router>
       <Nav isUserConected={isUserConected} setIsUserConected={setIsUserConected} changeLanguage={changeLanguage} />
       <Routes>
         <Route path='/' element={
