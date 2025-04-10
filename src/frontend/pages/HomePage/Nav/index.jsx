@@ -1,11 +1,8 @@
-
 import { Link } from 'react-router-dom'
 import ButtonLang from '../../Components/ButtonLang'
 import './style.css'
 
 function Nav({ isUserConected }) {
-
-    
     return (
         <div className="body-nav">
             <div className="wrapper-nav">
