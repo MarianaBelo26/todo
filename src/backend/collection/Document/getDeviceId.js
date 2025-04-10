@@ -1,4 +1,4 @@
-export function getDeviceId() {
+export default function getDeviceId() {
     let deviceId = localStorage.getItem('deviceId')
 
     if(!deviceId){
