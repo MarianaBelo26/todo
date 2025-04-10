@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import axios from 'axios'
+import getDeviceId from '../../../../backend/collection/Document/getDeviceId'
 import TodoForm from '../TodoForm'
 import FilterTasks from '../FilterTasks'
 import './style.css'
@@ -18,9 +19,10 @@ function Todo() {
     const [newList, setNewList] = useState("")
 
     const API_URL = "https://todo-04ky.onrender.com"
+    const deviceId = getDeviceId()
 
     useEffect(() => {
-        axios.get(`${API_URL}/lists`)
+        axios.get(`${API_URL}/lists/${deviceId}`)
             .then(result => setLists(result.data))
             .catch(err => console.log(err))
     }, [])
@@ -28,7 +30,7 @@ function Todo() {
     const addList = (name, e) => {
         e.preventDefault()
 
-        axios.post(`${API_URL}/lists`, { name })
+        axios.post(`${API_URL}/lists`, { name, deviceId })
             .then(result => {
                 setLists([...lists, result.data])
                 setSelectedList(result.data._id)

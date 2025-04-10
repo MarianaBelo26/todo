@@ -12,9 +12,9 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err))
 
-app.get('/lists', async (req, res) => {
+app.get('/lists/:deviceId', async (req, res) => {
     try {
-        const lists = await List.find()
+        const lists = await List.find({deviceId: req.params.deviceId})
         res.json(lists)
     } catch (err) {
         console.log('Erro ao buscar listas:', err)
@@ -24,9 +24,13 @@ app.get('/lists', async (req, res) => {
 
 app.post('/lists', async (req, res) =>{
     try{
+        const {name, deviceId} = req.body
+        if(!deviceId) return res.status(400)
+
         const newList = await List.create({
-            name: req.body.name,
-            tasks: []
+            name,
+            tasks: [],
+            deviceId
         })
         res.json(newList)
     }catch (err){
