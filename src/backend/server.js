@@ -17,6 +17,7 @@ app.get('/lists', async (req, res) => {
         const lists = await List.find()
         res.json(lists)
     } catch (err) {
+        console.log('Erro ao buscar listas:', err)
         res.status(500).json(err)
     }
 })

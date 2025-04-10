@@ -10,6 +10,6 @@ const ListSchema = new mongoose.Schema({
       tasks: [TaskSchema]
 })
 
-const List = mongoose.model('list', ListSchema)
+const List = mongoose.model('List', ListSchema)
 
 module.exports = List
